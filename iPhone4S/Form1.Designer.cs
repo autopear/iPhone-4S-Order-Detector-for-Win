@@ -164,11 +164,11 @@ namespace iPhone4S
             // LabelFollow
             // 
             this.LabelFollow.AutoSize = true;
-            this.LabelFollow.Location = new System.Drawing.Point(250, 274);
+            this.LabelFollow.Location = new System.Drawing.Point(258, 274);
             this.LabelFollow.Name = "LabelFollow";
-            this.LabelFollow.Size = new System.Drawing.Size(97, 13);
+            this.LabelFollow.Size = new System.Drawing.Size(85, 13);
             this.LabelFollow.TabIndex = 15;
-            this.LabelFollow.Text = "Follow autopear at:";
+            this.LabelFollow.Text = "Follow autopear:";
             // 
             // ButtonOpen
             // 
@@ -434,8 +434,9 @@ namespace iPhone4S
             this.Controls.Add(this.LabelArea);
             this.Controls.Add(this.ButtonStart);
             this.Controls.Add(this.axWindowsMediaPlayer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "iPhone 4S Online Order Detector v1.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -494,7 +495,7 @@ namespace iPhone4S
         public string AreaCode = "hk", DeviceSuffix="ZP";
         public string TextBlack = "Black", TextWhite = "White";
         public List<string> ListURL, ListDevice;
-        public string IntervalWarning = "The interval must be a integer!", AlertPrefix = "Devices below can be ordered now:\r\n\r\n", AlertTitle = "You can order iPhone 4S now!", AlertSuffix = "\r\nPress OK to open the page to order iPhone 4S, or press Cancel to continue running.";
+        public string ErrorTitle = "Error", IntervalError = "The interval must be a integer!", AlertPrefix = "Devices below can be ordered now:\r\n\r\n", AlertTitle = "You can order iPhone 4S now!", AlertSuffix = "\r\nPress OK to open the page to order iPhone 4S, or press Cancel to continue running.", DeviceError = "You must select at least one device.";
         public string BalloonTipStart = "Detection started! Double click the icon to show the main window.", BalloonTipNA = "None of your selected device is available for order.";
     }
 }

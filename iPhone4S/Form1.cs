@@ -67,6 +67,11 @@ namespace iPhone4S
                 ListDevice.Add(TextWhite + " 64GB");
             }
 
+            if (ListURL.Count == 0)
+            {
+                MessageBox.Show(DeviceError, ErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             try
             {
@@ -74,7 +79,7 @@ namespace iPhone4S
             }
             catch (Exception ex)
             {
-                MessageBox.Show(IntervalWarning);
+                MessageBox.Show(IntervalError, ErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -265,19 +270,21 @@ namespace iPhone4S
                 ButtonStart.Text = "Start";
                 TextBlack = "Black";
                 TextWhite = "White";
-                IntervalWarning = "The interval must be a integer!";
+                IntervalError = "The interval must be a integer!";
+                ErrorTitle = "Error";
+                DeviceError = "You must select at least one device.";
                 AlertPrefix = "Devices below can be ordered now:\r\n\r\n";
                 AlertTitle = "You can order iPhone 4S now!";
                 AlertSuffix = "\r\nPress OK to open the page to order iPhone 4S, or press Cancel to continue running.";
                 BalloonTipStart = "Detection started! Double click the icon to show the main window.";
                 BalloonTipNA = "None of your selected device is available for order.";
                 TextBoxHelp.Text = "1. Select an area where you want to order iPhone 4S from.\r\n\r\n2. Select the device(s) you want to order.\r\n\r\n3. Set the detection interval and the time unit.\r\n\r\n4. You can enable silent mode, which will only warn you when an order is available.";
-                LabelFollow.Text = "Follow autopear at:";
+                LabelFollow.Text = "Follow autopear:";
             }
             //Traditional Chinese
             if (index == 1)
             {
-                this.Text = "iPhone 4S 在綫訂購檢測 v1.0";
+                this.Text = "iPhone 4S 在綫訂購探測 v1.0";
                 LabelArea.Text = "地區";
                 LabelPageURL.Text = "位址：";
                 ButtonOpen.Text = "開啟";
@@ -304,11 +311,13 @@ namespace iPhone4S
                 ButtonStart.Text = "開始";
                 TextBlack = "黑色";
                 TextWhite = "白色";
-                IntervalWarning = "間隔時間必須是整數！";
+                IntervalError = "間隔時間必須是整數！";
+                ErrorTitle = "錯誤";
+                DeviceError = "你必須選擇至少一個設備。";
                 AlertPrefix = "下列設備已可訂購：\r\n\r\n";
                 AlertTitle = "現已可訂購 iPhone 4S！";
                 AlertSuffix = "\r\n點擊確定打開訂購頁面，或點擊取消以繼續執行。";
-                BalloonTipStart = "開始檢測！雙擊本圖示以顯示窗口。";
+                BalloonTipStart = "探測開始！雙擊本圖示以顯示窗口。";
                 BalloonTipNA = "沒有設備可供訂購。";
                 TextBoxHelp.Text = "1. 選擇要訂購 iPhone 4S 的地區；\r\n\r\n2. 選擇要訂購的設備型號；\r\n\r\n3. 設定檢測間隔時間和單位；\r\n\r\n4. 如需只在可訂購時發出提醒，請啟用靜默模式。";
                 LabelFollow.Text = "關注 autopear：";
@@ -343,11 +352,13 @@ namespace iPhone4S
                 ButtonStart.Text = "开始";
                 TextBlack = "黑色";
                 TextWhite = "白色";
-                IntervalWarning = "间隔时间必须是整数！";
+                IntervalError = "间隔时间必须是整数！";
+                ErrorTitle = "错误";
+                DeviceError = "您必须选择至少一个设备。";
                 AlertPrefix = "下列设备已可订购：\r\n\r\n";
                 AlertTitle = "现已可订购 iPhone 4S！";
                 AlertSuffix = "\r\n点击确定打开订购页面，或点击取消以继续运行。";
-                BalloonTipStart = "开始检测！双击本图标以显示窗口。";
+                BalloonTipStart = "检测开始！双击本图标以显示窗口。";
                 BalloonTipNA = "没有设备可供订购。";
                 TextBoxHelp.Text = "1. 选择要订购 iPhone 4S 的地区；\r\n\r\n2. 选择要订购的设备型号；\r\n\r\n3. 设定检测间隔时间和单位；\r\n\r\n4. 如需只在可订购时发出提醒，请启用静默模式。";
                 LabelFollow.Text = "关注 autopear：";

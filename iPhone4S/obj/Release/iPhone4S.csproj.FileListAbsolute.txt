@@ -1,0 +1,14 @@
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\obj\Release\Interop.WMPLib.dll
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\obj\Release\AxInterop.WMPLib.dll
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\obj\Release\iPhone4S.csproj.ResolveComReference.cache
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\bin\Release\iPhone4S.exe
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\bin\Release\iPhone4S.pdb
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\bin\Release\Interop.WMPLib.dll
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\bin\Release\AxInterop.WMPLib.dll
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\obj\Release\iPhone4S.Form1.resources
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\obj\Release\iPhone4S.Properties.Resources.resources
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\obj\Release\ResGen.read.1.tlog
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\obj\Release\ResGen.write.1.tlog
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\obj\Release\iPhone4S.exe
+C:\Users\Merlin\Documents\Visual Studio 2010\Projects\iPhone4S\iPhone4S\obj\Release\iPhone4S.pdb
