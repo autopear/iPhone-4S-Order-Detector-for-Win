@@ -38,32 +38,32 @@ namespace iPhone4S
 
             if (CheckBlackS.Checked)
             {
-                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD234" + DeviceSuffix));
+                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD" + DeviceB16 + DeviceSuffix));
                 ListDevice.Add(TextBlack + " 16GB");
             }
             if (CheckBlackM.Checked)
             {
-                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD241" + DeviceSuffix));
+                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD" + DeviceB32 + DeviceSuffix));
                 ListDevice.Add(TextBlack + " 32GB");
             }
             if (CheckBlackL.Checked)
             {
-                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD257" + DeviceSuffix));
+                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD" + DeviceB64 + DeviceSuffix));
                 ListDevice.Add(TextBlack + " 64GB");
             }
             if (CheckWhiteS.Checked)
             {
-                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD237" + DeviceSuffix));
+                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD" + DeviceW16 + DeviceSuffix));
                 ListDevice.Add(TextWhite + " 16GB");
             }
             if (CheckWhiteM.Checked)
             {
-                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD244" + DeviceSuffix));
+                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD" + DeviceW32 + DeviceSuffix));
                 ListDevice.Add(TextWhite + " 32GB");
             }
             if (CheckWhiteL.Checked)
             {
-                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD260" + DeviceSuffix));
+                ListURL.Add(URLTemplate.Replace("AREACODE", AreaCode).Replace("DEVICECODE", "MD" + DeviceW64 + DeviceSuffix));
                 ListDevice.Add(TextWhite + " 64GB");
             }
 
@@ -153,6 +153,8 @@ namespace iPhone4S
                 HttpWebRequest PageRequest = (HttpWebRequest)WebRequest.Create(url);
                 HttpWebResponse ServerResponse = (HttpWebResponse)PageRequest.GetResponse();
                 ServerResponse.Close();
+                if (ServerResponse.ResponseUri.AbsoluteUri.EndsWith("/cart"))
+                    return 404;
                 return (int)ServerResponse.StatusCode;
             }
             catch (WebException we)
@@ -173,30 +175,72 @@ namespace iPhone4S
             {
                 AreaCode = "hk";
                 DeviceSuffix = "ZP";
+                DeviceB16 = "235";
+                DeviceB32 = "242";
+                DeviceB64 = "258";
+                DeviceW16 = "239";
+                DeviceW32 = "254";
+                DeviceW64 = "261";
             }
             //Hong Kong Chinese
             if (ComboArea.SelectedIndex == 1)
             {
                 AreaCode = "hk-zh";
                 DeviceSuffix = "ZP";
+                DeviceB16 = "235";
+                DeviceB32 = "242";
+                DeviceB64 = "258";
+                DeviceW16 = "239";
+                DeviceW32 = "254";
+                DeviceW64 = "261";
             }
             //China
             if (ComboArea.SelectedIndex == 2)
             {
                 AreaCode = "cn";
                 DeviceSuffix = "CH";
+                DeviceB16 = "234";
+                DeviceB32 = "241";
+                DeviceB64 = "257";
+                DeviceW16 = "237";
+                DeviceW32 = "244";
+                DeviceW64 = "260";
             }
             //Taiwan
             if (ComboArea.SelectedIndex == 3)
             {
                 AreaCode = "tw";
                 DeviceSuffix = "TA";
+                DeviceB16 = "234";
+                DeviceB32 = "241";
+                DeviceB64 = "257";
+                DeviceW16 = "237";
+                DeviceW32 = "244";
+                DeviceW64 = "260";
             }
-            //Australia
+            //South Korea
             if (ComboArea.SelectedIndex == 4)
             {
-                AreaCode = "au";
-                DeviceSuffix = "X";
+                AreaCode = "kr";
+                DeviceSuffix = "KH";
+                DeviceB16 = "234";
+                DeviceB32 = "241";
+                DeviceB64 = "257";
+                DeviceW16 = "237";
+                DeviceW32 = "244";
+                DeviceW64 = "260";
+            }
+            //New Zealand
+            if (ComboArea.SelectedIndex == 5)
+            {
+                AreaCode = "nz";
+                DeviceSuffix = "NZ";
+                DeviceB16 = "234";
+                DeviceB32 = "241";
+                DeviceB64 = "257";
+                DeviceW16 = "237";
+                DeviceW32 = "244";
+                DeviceW64 = "260";
             }
             textBox3.Text = "http://store.apple.com/AREACODE/browse/home/shop_iphone/family/iphone/iphone4s".Replace("AREACODE", AreaCode);
         }
@@ -243,7 +287,7 @@ namespace iPhone4S
             //English
             if (index == 0)
             {
-                this.Text = "iPhone 4S Online Order Detector v1.0";
+                this.Text = "iPhone 4S Online Order Detector v1.1";
                 LabelArea.Text = "Area";
                 LabelPageURL.Text = "URL:";
                 ButtonOpen.Text = "Open";
@@ -284,7 +328,7 @@ namespace iPhone4S
             //Traditional Chinese
             if (index == 1)
             {
-                this.Text = "iPhone 4S 在綫訂購探測 v1.0";
+                this.Text = "iPhone 4S 在綫訂購探測 v1.1";
                 LabelArea.Text = "地區";
                 LabelPageURL.Text = "位址：";
                 ButtonOpen.Text = "開啟";
@@ -325,7 +369,7 @@ namespace iPhone4S
             //Simplified Chinese
             if (index == 2)
             {
-                this.Text = "iPhone 4S 在线订购检测 v1.0";
+                this.Text = "iPhone 4S 在线订购检测 v1.1";
                 LabelArea.Text = "地区";
                 LabelPageURL.Text = "地址：";
                 ButtonOpen.Text = "打开";
